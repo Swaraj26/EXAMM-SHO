@@ -1,0 +1,4 @@
+[ERROR   main_0               ] ERROR: do_population_check had issue on island.cxx line 309, status was FILLED and genomes.size() was: 9, size at beginning of insert was: 10
+[ERROR   main_0               ] ERROR: do_population_check had issue on island.cxx line 309, status was FILLED and genomes.size() was: 9, size at beginning of insert was: 10
+[ERROR   main_0               ] ERROR: do_population_check had issue on island.cxx line 309, status was FILLED and genomes.size() was: 8, size at beginning of insert was: 10
+[ERROR   main_0               ] ERROR: do_population_check had issue on island.cxx line 309, status was FILLED and genomes.size() was: 9, size at beginning of insert was: 10

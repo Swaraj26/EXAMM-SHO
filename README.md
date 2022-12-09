@@ -1,5 +1,30 @@
+# Code changes by Amit, Swaraj, Aditya, and Akshar
 
-# Getting Started and Prerequisites
+# A. Experiment: Tuning Learning Rate with SHO
+1. Hyperparameter tuning implmentation is done using the Simplex Hyperparameter Optimization method in the rnn\EXAMM.cxx class
+2. The methods EXAMM::generate_examm_initial_hyperparameters() and EXAMM::generate_examm_simplex_hyperparameters contain the implementation for SHO required for evolutionary
+hyperparameters namely Clone rate, Add edge rate, Add recurrent edge rate, Enable edge rate, Disable edge rate, Add node rate, Enable node rate,
+Disable node rate, Split node rate, and Merge node rate
+3. The methods EXAMM::generate_initial_hyperparameters() and EXAMM::generate_simplex_hyperparameters contain the implementation for SHO required for weight update
+hyperparameters namely Learning rate. All other future work on hyperparameters related to weight updates will be added here
+4. The methods declared in steps 2 and 3 are invoked in EXAMM::generate_genome() method.
+5. All the supporting variables, accessors, and mutator methods are written across EXAMM and RNN_GENOME classes
+6. The plots of results for the experiment can be viewed in sample_results/sample_output_graphs/SHO/ folder for all 3 datasets.
+7. The raw csv files used to generate the result plots for SHO can be accessed at sample_results/sho_all_*/max_genome_10000/island_10/*/fitness_log.csv
+8. The raw csv files used to generate the result plots for baseline EXAMM can be accessed at sample_results/base_*/max_genome_10000/island_10/*/fitness_log.csv
+9. The script to regenerate the result plot can be accessed at \plot_fitness_sho.py. The plot_fitness_sho.py file contains the instructions to change the paths for result files
+10. Steps to execute the full EXAMM code are given below in section "D" named: "Getting Started and Prerequisites"
+
+# B. Experiment: Using variable timeskips for recurrent edges and memory cells
+1. The implementation for variable timeskips can be accessed in the below PR on the original EXAMM repository: https://github.com/travisdesell/exact/pull/13
+2. The plots of results for the experiment can be viewed in sample_results/sample_output_graphs/Timeskips/ folder for all 3 datasets.
+
+# C. Experiment: Using Adam and RMSProp as weight update methods
+1. The implementation for Adam as weight update method was proven statistically and hence the code was merged with original EXAMM repository and is available at https://github.com/travisdesell/exact
+2. This version is now the new baseline for any future work on EXAMM
+3. The plots of results for the experiment can be viewed in sample_results/sample_output_graphs/Weight_Update_Methods/ folder for all 3 datasets.
+
+# D. Getting Started and Prerequisites
 
 EXONA has been developed to compile using CMake, which should be installed before attempting to compile. To use the MPI version, a version of MPI (such as OpenMPI) should be installed. EXACT currently requires libtiff and libpng
 The EXACT algorithm can also checkpoint to a database, however this is not required.  To enable this I recommend installing libmysql-dev via apt-get on Linux systems, or mysql via [homebrew](https://brew.sh) on OSX.  Other than that, EXACT/EXALT/EXAMM has no prerequesites other than c++11 compatible compiler.

@@ -12,7 +12,7 @@ hyperparameters namely Learning rate. All other future work on hyperparameters r
 6. The plots of results for the experiment can be viewed in sample_results/sample_output_graphs/SHO/ folder for all 3 datasets.
 7. The raw csv files used to generate the result plots for SHO can be accessed at sample_results/sho_all_*/max_genome_10000/island_10/*/fitness_log.csv
 8. The raw csv files used to generate the result plots for baseline EXAMM can be accessed at sample_results/base_*/max_genome_10000/island_10/*/fitness_log.csv
-9. The script to regenerate the result plot can be accessed at \plot_fitness_sho.py. The plot_fitness_sho.py file contains the instructions to change the paths for result files
+9. The script to regenerate the result plot can be accessed at \plot_fitness_sho.py. The plot_fitness_sho.ipynb file contains the instructions to change the paths for result files
 10. Steps to execute the full EXAMM code are given below in section "D" named: "Getting Started and Prerequisites"
 
 # B. Experiment: Using variable timeskips for recurrent edges and memory cells
